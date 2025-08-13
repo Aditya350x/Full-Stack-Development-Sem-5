@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking UI</title>
+    <style>
+        * {
+            background-color: rgb(181, 177, 177);
+        }
+        p {
+            color: green;
+            background-color: white;
+            font-weight: normal;
+            font-size: 25px;
+        }
+        #dep {
+            background-color: rgb(19, 165, 19);
+        }
+        #wdl {
+            background-color: red;
+        }
+        .whole {
+            width: 150px;
+            text-align: center;
+            margin-left: 35rem;
+            border-radius: 15px;
+            font-family: sans-serif;
+        }
+        .balance {
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            margin: 150px auto;
+            width: 350px;
+            height: 250px;
+            border-radius: 15px;
+            box-shadow: 5px 5px rgb(168, 167, 167);
+        }
+        button {
+            border: none;
+            width: 300px;
+            height: 50px;
+            border-radius: 15px;
+            color: white;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="whole">
+        <div class="balance">
+            <p>$0</p>
+            <button type="submit" id="dep">Deposit</button>
+            <br>
+            <button type="submit" id="wdl">Withdraw</button>
+        </div>
+    </div>
+</body>
+</html>
