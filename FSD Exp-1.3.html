@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+        .Dashboard {
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "sidebar main"
+            "footer footer";
+            grid-template-columns: 200px auto;
+            grid-template-rows: 60px auto 40px;
+            height: 100vh;
+        }
+        .header {
+            grid-area: header;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #f0f0f0;
+            padding: 40px;
+        }
+        .main {
+            grid-area: main;
+            background-color: white;
+            padding: 30px;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 0;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin: 10px;
+        }
+        body.light {
+            background-color: #f0f0f0;
+            color: black;
+        }
+        body.dark {
+            background-color: black;
+            color: white;
+        }
+        body.dark .header {
+            background-color: rgb(50, 49, 49);
+            color: white;
+        }
+        body.dark .main {
+            background-color: black;
+            color: white;
+        }
+        body.dark .sidebar {
+            background-color: rgb(54, 53, 53);
+        }
+        body.dark .footer {
+            background-color: rgb(33, 32, 32);
+            color: white;
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="Dashboard">
+        <div class="header">
+            <h1>Admin Dashboard</h1>
+            <label>
+                <input type="checkbox" id="dark_mode"> Dark mode
+            </label>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Users.html">Users</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h2>Welcome, Admin!</h2>
+            <p>This is the main content area. Add charts, tables and reports here.</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 Admin Panel</p>
+        </div>
+    </div>
+    <script>
+        const checkbox = document.getElementById("dark_mode");
+        const body = document.body;
+        checkbox.addEventListener("change", () => {
+            if (checkbox.checked) {
+                body.classList.add("dark");
+            } else {
+                body.classList.remove("dark");
+            }
+        });
+    </script>
+</body>
+</html>
